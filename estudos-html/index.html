@@ -19,7 +19,7 @@
         Ir para o site do Google
     </a>
 
-    <hr>
+    <hr style="height: 10px;" color="black">
 
     <h1>Página Teste</h1>
 
@@ -49,5 +49,199 @@
     <h2 id="area8">Área 8</h2>
     <img src="https://www.google.com.br/google.jpg" alt="Google">
     
+
+    <h1>Pagina de login</h1>
+
+    <h2>Area de Cadastro</h2>
+    <form action="teste.html" method="POST">
+
+        <p>Escreva um texto:</p>
+        <input type="text">
+
+        <p>Marque a caixa:</p>
+        <input type="checkbox">
+
+        <p>Sua senha:</p>
+        <input type="password">
+
+        <p>Selecione uma:</p>
+        <input type="radio" name="sexo">
+        <input type="radio" name="sexo">
+
+        <p>Enviar:</p>
+        <input type="submit">
+
+        <p>Insira o e-mail:</p>
+        <input type="e-mail">
+
+        <p>Escolha a cor:</p>
+        <input type="color">
+
+        <p>Insira data:</p>
+        <input type="date">
+
+        <p>Insira data e hora:</p>
+        <input type="datetime-local">
+
+        <p>Insira numeros:</p>
+        <input type="number">
+
+        <p>Defina o range:</p>
+        <input type="range">
+
+        <p>Search:</p>
+        <input type="search">
+
+        <p>Insira o telefone:</p>
+        <input type="tel">
+
+        <p>Insira o tempo:</p>
+        <input type="time">
+
+        <p>Insira a URL:</p>
+        <input type="url">
+    </form>
+
+    <hr style="height: 10px;" color="black">
+
+    <form action="teste.html" method="GET">
+
+        <select name="order" size="2" multiple>
+            <option value=""></option>
+            <option value="bestseller">Mais Vendido</option>
+            <option value="last">Recentes</option>
+        </select>
+
+        <input type="submit" value="Fazer Cadastro">
+
+        <p>Insira um comentário:</p>
+        <textarea name="decricao" id="" cols="30" rows="10"></textarea>
+    </form>
+
+    <hr style="height: 10px;" color="black">
+
+    <form action="teste.html" method="GET">
+
+        <label for="nome">Nome Completo</label> <br>
+        <input type="text" name="nome" id="nome">
+
+        <input type="checkbox" id="check">
+        <label for="check">Essa e uma frase maior.</label>
+
+        <button>Fazer Cadastro</button>
+    </form>
+
+    <h2> Estilizando os Formulários:</h2>
+
+    <form action="teste.html" method="GET" id="estilo"> 
+
+        <label>
+            Nome Completo: <br>
+            <input type="text" name="nome" class="box-name">
+        </label>
+
+        <label>
+            Descrição: <br>
+            <textarea name="descricao"></textarea>
+        </label>
+
+        <label>
+            Categoria: <br>
+            <select name="categoria">
+                <option value="1">Categoria1</option>
+                <option value="2">Categoria2</option>
+                <option value="3">Categoria3</option>
+                <option value="4">Categoria4</option>
+            </select>
+        </label>
+
+        <label>
+            <input type="checkbox">
+            Eu declaro que li e aceito os <a href="paginas/termos.html" target="_blank" class="termo-link">termos de uso</a>.
+        </label>
+
+        <button>Fazer Cadastro</button>
+    </form>
+
+    <hr style="height: 10px;" color="black">
+
+    <h2>Ficha de Dados:</h2>
+
+    <form method="POST" action="blablabla.php" enctype="multipart/form-data">
+        <input type="hidden" name="country" value="BR">
+        <!--Ao aplicar o valor hidden no parametro o elemento não será exibido na tela para o usuário-->
+
+        <fieldset class="setup">
+            <legend>Dados Pessoais</legend>
+            <label>
+                Primeiro Nome: <br>
+                <input type="text" name="name" required minlength="2" maxlength="4">
+            </label>
+            <label>
+                Segundo Nome: <br>
+                <input type="text" name="lastname" required>
+            </label>
+            <label>
+                E-mail: <br>
+                <input type="text" name="e-mail">
+            </label>
+            <label>
+                Idade: <br>
+                <input type="number" name="age" min="18" max="120">
+            </label>
+            <label>
+                Data de Nascimento: <br>
+                <input type="date" name="birthdate" min="2021-06-14">
+            </label>
+            <label>
+                Foto: <br>
+                <input type="file" name="photo" accept="image/*">
+                <!--
+                    O accept consegue filtrar qual o tipo de arquivo poderá ser enviado.
+                    Exemplos de accept: "application/pdf"
+                -->
+            </label>
+        </fieldset>
+
+        <fieldset class="setup">
+            <legend>Dados Profissionais</legend>
+            <label>
+                Nome da Empresa: <br>
+                <input type="text" name="companyname">
+            </label>
+            <label>
+                Cargo na Empresa: <br>
+                <input type="text" name="companyjobtitle">
+            </label>
+        </fieldset>
+
+        <input type="submit" value="Cadastrar">
+
+
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
 </body>
 </html>

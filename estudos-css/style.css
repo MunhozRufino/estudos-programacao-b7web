@@ -19,3 +19,62 @@
     padding: 10px;
     margin: 20px;
 }
+
+#estilo label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.box-name, textarea, select {
+    padding: 10px;
+    width: 500px;
+    font-size: 15px;
+    border: 1px solid lightgray;
+    outline: 0;
+    margin-top: 5px;
+}
+
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+.termo-link {
+    color: black;
+    text-decoration: none;
+}
+
+.termo-link:hover {
+    text-decoration: underline;
+}
+
+#estilo button {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid lightblue;
+    background-color: lightgray;
+}
+
+#estilo button:hover {
+    background-color: gray;
+}
+
+.setup {
+    background-color: rgb(240, 238, 238);
+    margin-bottom: 20px;
+    border: 1px solid blue;
+}
+
+
+
+.setup label input {
+    margin-bottom: 10px;
+    display: block;
+}
+
+legend {
+    padding: 5px;
+    background-color: blue;
+    color: white;
+}
+
