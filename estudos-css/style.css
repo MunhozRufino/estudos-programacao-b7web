@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    /*
+    Este "*" aplica efeito em todos os elementos na tela abaixo. Ao aplicar a proriedade box-sizing: você pode aplicar as seguinte propriedades:
+
+    -content-box = essa proriedade diz que o tamanho do elemento e definido pelo conteudo apenas, sem incluir padding e border.
+    
+    -border-box = essa  propriedade aplica o tamanho do conteudo incluindo o padding e border totalizando o tamanho real. 
+    */
+}
+
+.exemplo {
+    background-color: greenyellow;
+    width: 400px;
+    height: 400px;
+    border: 5px solid black;
+    padding: 10px;
+    margin: 20px;
+}
