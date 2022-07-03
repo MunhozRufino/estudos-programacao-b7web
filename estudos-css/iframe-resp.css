@@ -1,0 +1,28 @@
+body {
+    background-color: antiquewhite;
+}
+
+.video {
+    width: calc(100% - 40px);
+    max-width: 800px;
+    margin: auto;
+}
+
+.video-area {
+    position: relative;
+    height: 0px;
+    background-color: grey;
+    padding: 0px 0px 56.25%;
+    /*na propriedade e padding editamos a altura e largura relativa do elemento*/
+}
+
+.video-area iframe {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    
+}

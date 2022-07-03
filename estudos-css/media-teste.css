@@ -1,0 +1,83 @@
+:root {
+    --font-size: 30px;
+}
+
+body {
+    background-color: aqua;
+    display: flex;
+    font-size: var(--font-size);
+}
+
+h1 {
+    font-size: var(--font-size);
+}
+
+table {
+    border: 2px solid red;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+tr, td {
+    border: 1px solid black;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+
+}
+
+/*landscape refere-se a orientação majoritária horizontal*/
+@media (orientation: landscape) {
+    body {
+        flex-direction: row;
+    }
+}
+
+/*portrait refere-se a orientação maroitária vertical*/
+@media (orientation: portrait) {
+    body {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        background-color: black;
+    }
+}
+
+@media (max-width: 1000px) and (min-width: 700px) {
+    body {
+        background-color: blueviolet;
+    }
+}
+
+@media (max-width: 700px) and (min-width: 500px) {
+    body {
+        background-color: brown;
+    }
+}
+
+@media (max-width: 500px) and (min-width: 300px) {
+    body {
+        background-color: yellowgreen;
+    }
+    :root {
+        --font-size: 20px;
+    }
+}
+
+@media only print {
+    h1 {
+        font-size: 20px;
+        display: none;
+    }
+
+    table, td, tr {
+        border: none;
+    }
+}
