@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+div {
+    background-color: lightcoral;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 100px;
+    transition: all 1s linear;
+}
+
+div:hover {
+    width: 600px;
+    background-color: black;
+}
+
+a {
+    color: #000;
+    transition: all 0.5s linear;
+    font-size: 26px;
+    display: block;
+    text-align: center;
+    margin: 50px;
+}
+
+
+a:hover {
+    color: #f00;
+
+}
