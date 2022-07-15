@@ -23,23 +23,29 @@ section div h1 {
 }
 
 section {
-    margin-top: 230px;
+    margin-top: 250px;
 }
 
 section form {
     display: flex;
 }
 
-
-.descrition {
-    margin-right: 20px;
+.descrition p {
+    width: 170px;
 }
 
 strong {
     color: darkred;
 }
 
-.button {
+textarea {
+    width: 350px;
+    height: 100px;
+    outline: 0;
+    resize: none;
+}
+
+button {
     font-size: 18px;
     color: #F2F2F2;
     border: 1px solid rgb(79, 150, 231);
@@ -49,6 +55,23 @@ strong {
     width: 150px;
 }
 
-.input {
-
+button:hover {
+    background-color: rgb(0, 72, 134);
 }
+
+input[type="file"] {
+    font-size: 11px;
+    color: #F2F2F2;
+    border: 1px solid rgb(79, 150, 231);
+    background-color: rgb(0, 41, 77);
+}
+
+input {
+    border: 1px solid transparent;
+    outline: 0;
+}
+
+input[name="phone"] {
+    width: 25px;
+}
+

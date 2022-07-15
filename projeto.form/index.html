@@ -9,59 +9,42 @@
     <title>Formulário</title>
 </head>
 
-
-        <section>
-            <div class="header">
-                <h1>Contact form</h1>
-            </div>
-            <form action="../estudos-html/form.html" method="post"> <!--Get: Pega as informações dentro do formulário e enviam para url (aparece na url) informada "form.html"
-                Post: as informação vão internamente e não aparece na url -->
-            <div class="descrition">
-                    <p>Your Name: </p>
-                    <p>Your E-mail: <strong>*</strong></p>
-                    <p>Phone: <strong >*</strong></p>
-                    <p>Age:</p>
-                    <p>Genere:</p>
-                    <p>Message Subject:</p>
-                    <p>Message:</p>
-            </div>
-            <div class="">
-                <p><input type="text"> <input type="text"></p>
-                <p><input type="email"></p>
-                <p><input type="tel"> <input type="tel"></p>
-                <p><input type="date"></p>
-                <p><input type="radio" name="sexo"><input type="radio" name="sexo"></p>
-                <p>
-                    <select name="" id="">
-                        <option value="1"></option>
+    <section>
+        <div class="header">
+            <h1>Contact form</h1>
+        </div>
+            <form action="../estudos-html/form.html" method="get" enctype="multipart/form-data"> <!--Get: Pega as informações dentro do formulário e enviam para url (aparece na url) informada "form.html".
+            Post: as informação vão internamente e não aparece na url.
+            enctype: utilizado para enviar os arquivos encripitados, devendo ser inserido para enviar arquivos junto com o formulário-->
+                <div class="descrition">
+                    <p><label for="usuario">Your Name:</label></p>
+                    <p><label for="e-mail">Your E-mail: <strong>*</strong></label></p>
+                    <p><label for="phone">Phone: <strong >*</strong></label></p>
+                    <p><label for="age">Age:</label></p>
+                    <p><label for="genere">Genere:</label></p>
+                    <p><label for="messagesub">Message Subject:</label></p>
+                    <p><label for="message">Message:</label></p>
+                </div>
+                <div>
+                    <p><input type="text" name="usuario" id="usuario" placeholder="first name"> <input type="text" name="usuario" placeholder="second name"></p>
+                    <p><input type="email" id="e-mail"></p>
+                    <p><input type="tel" id="phone" name="phone" maxlength="3" placeholder="ddd"> <input type="tel" maxlength="9"></p>
+                    <p><input type="date" id="age"></p>
+                    <p>
+                        <label><input type="radio" name="sexo"> Masculine</label>
+                        <label><input type="radio" name="sexo"> Feminine</label>
+                    </p>
+                    <select name="serviços" id="messagesub">
+                        <option></option>
                         <option value="2">Support</option>
                         <option value="3">Sales</option>
                         <option value="4">Administrative</option>
                         <option value="5">You doubt</option>
                         <option value="6">Suggestions</option>
-                    </select></p>
-                </p>
-                <p><textarea name="message" id="" cols="30" rows="5"></textarea></p>
-            </div>
+                    </select>
+                    <p><textarea name="message" id="message" maxlength="282"></textarea><input type="file"></p>
+                    <button>Submit form</button>
+                </div>
             </form>
-            <div class="input">
-                <input class="button" type="button" value="Submit form">
-            </div>
-        </section>
-
-
-
-
-
-
-    
-
-        
-
-
-
-
-
-
-
+    </section>
 </html>
