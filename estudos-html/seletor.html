@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletor pelo atributo</title>
+    <style>
+
+        input, a {
+            display: block;
+        }
+
+        [required] {
+            background-color: red;
+        }
+
+        a[href^="https:"] {
+            background-color: lightcoral;
+        }
+
+        a[href^="http:"] {
+            background-color: lightgoldenrodyellow;
+        }
+
+        a[href*="g1"] {
+            background-color: blue;
+        }
+
+        a[href*="italia"] {
+            background-color: greenyellow;
+        }
+
+        a[href$="html"] {
+            background-color: 0;
+        }
+
+        p::first-letter {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        p::first-line {
+            background-color: lightgoldenrodyellow;
+        }
+
+        section div {
+            background-color: cadetblue;
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            
+        }
+
+        section div:first-child {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        section div:last-child {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        section div:nth-child(2) {
+            background-color: tomato;
+        }
+
+        section div:nth-last-child(2) {
+            background-color: violet;
+        }
+
+        aside :not(p) {
+            background-color: steelblue;
+        }
+
+        .balao {
+            background-color: blue;
+            display: inline-block;
+            color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+        }
+
+        .balao::after {
+            content: '';
+            display: block;
+            position: absolute;
+            margin-top: 20px;
+
+            border: 20px solid;
+            border-color: blue greenyellow red violet;
+        }
+
+    </style>
+</head>
+<body>
+
+    <input type="text" name="usuario" required>
+
+    <input type="password" name="senha" >
+
+    <a href="https://www.google.com.br">Google</a>
+
+    <a href="http://www.site.com.br">Site</a>
+
+    <a href="https://g1.globo.com/mundo/noticia/2022/07/17/aviao-ucraniano-que-caiu-na-grecia-levava-11-toneladas-de-armamento-para-bangladesh.ghtml">Avião ucraniano</a>
+
+    <a href="https://g1.globo.com/rj/rio-de-janeiro/noticia/2022/07/17/brasileiros-e-estrangeiros-continuam-a-investir-em-imoveis-de-luxo-no-rio-fotos.ghtml">Imóveis de luxo</a>
+
+    <a href="https://ge.globo.com/volei/noticia/2022/07/17/brasil-encara-a-italia-de-egonu-na-final-da-liga-das-nacoes.ghtml">Brasil Volei</a>
+
+    <a href="https://ge.globo.com/ginastica-artistica/noticia/2022/07/16/brasil-desafia-eua-no-pan-de-ginastica-de-olho-no-mundial.ghtml">Brasil Ginástica</a>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi esse at ipsam labore velit sint, illo veritatis, odit enim natus eveniet molestiae necessitatibus aperiam distinctio nesciunt placeat ut dolores inventore?</p>
+
+    <p>Porem ipsum, dolor sit amet consectetur adipisicing elit. Modi esse at ipsam labore velit sint, illo veritatis, odit enim natus eveniet molestiae necessitatibus aperiam distinctio nesciunt placeat ut dolores inventore?</p>
+
+    <p>Vorem ipsum, dolor sit amet consectetur adipisicing elit. Modi esse at ipsam labore velit sint, illo veritatis, odit enim natus eveniet molestiae necessitatibus aperiam distinctio nesciunt placeat ut dolores inventore?</p>
+
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <aside>
+        <div>text 1</div>
+        <p>text 2</p>
+        <a href="#">text 3</a>
+    </aside>
+
+    <div class="balao">Olá tudo bem! <br> Como vai? </div>
+
+</body>
+</html>
+
+

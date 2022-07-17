@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Audiowide&display=swap');
 
-
 body {
     background-image: url(imagens/plano-de-fundo.jpg);
     background-size: cover;
@@ -10,9 +9,38 @@ body {
     background-attachment: fixed;
     font-family: 'Audiowide', cursive;;
     color: #F2F2F2;
+}
+
+body main {
     max-width: 550px;
     margin: auto;
 }
+
+header .box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    transform: rotate(-45deg);
+    top: 50px;
+    left: -80px;
+    box-shadow: 1px 1px 10px rgb(79, 150, 231);
+    border: 1px solid rgb(79, 150, 231);
+    background-color: rgb(0, 41, 77);
+}
+
+header a {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+header .box:hover {
+    background-color: rgb(79, 150, 231);
+}
+
 
 section div h1 {
     color: #F2F2F2;
@@ -53,6 +81,7 @@ button {
     margin-top: 20px;
     padding: 10px;
     width: 150px;
+    box-shadow: 1px 1px 10px rgb(79, 150, 231);
 }
 
 button:hover {
@@ -72,6 +101,12 @@ input {
 }
 
 input[name="phone"] {
-    width: 25px;
+    width: 30px;
+}
+
+input::placeholder {
+    color:rgb(68, 128, 196);
+    font-weight: lighter;
+    font-family: 'Audiowide', cursive;
 }
 
