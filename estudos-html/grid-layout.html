@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .container {
+            background-color: lightgrey;
+            display: grid;
+            gap: 10px;
+            grid-template-areas: 
+            "header header header header"
+            "menu content content content"
+            "ad  content content content"
+            "footer footer footer footer"
+            ;
+        }
+
+        .item {
+            background-color: blue;
+            border-radius: 10px;
+            padding: 20px;
+            color: aliceblue;
+            font-size: 20px;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        nav {
+            grid-area: menu;
+        }
+
+        section {
+            grid-area: content;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        .ad {
+            grid-area: ad;
+        }
+
+        @media (max-width: 750px) {
+            .container {
+                grid-template-areas: 
+                "header header header menu"
+                "content content content content"
+                "ad ad ad ad"
+                "footer footer footer footer"
+                ;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <header class="item">Cabeçalho</header>
+        <nav class="item">Menu</nav>
+        <section class="item">Conteúdo - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro tempore quia ullam repudiandae amet eius dolorem vitae optio nostrum praesentium quis repellat sequi perferendis molestiae facere autem at, animi aperiam.</section>
+        <footer class="item">Rodapé</footer>
+        <div class="item ad">Anuncio</div>
+    </div>
+
+</body>
+</html>
