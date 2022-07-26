@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function digitou(e) {
+            // console.log(e)
+            // console.log('Você digitou!')
+            if(e.keyCode == 13 && e.ctrlKey == true) { // código será executado quando a tecla Enter for pressionada
+                let texto = document.getElementById('campo').value;
+
+                console.log(texto);
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    
+    <h1 id="titulo">Seja bem vindo</h1>
+
+
+    <input onkeyup="digitou(event)" id="campo" type="text" name="usuario" placeholder="Nome do usuário">
+    
+    <button onclick="clicou()" >Clique em mim</button>
+    <button onclick="this.innerHTML='Você já clicou'" >Clique de novo</button>
+
+</body>
+</html>

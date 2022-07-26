@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function azul() {
+            limpar();
+            document.getElementById('titulo').classList.add('azul');
+        }
+
+        function vermelho() {
+            limpar();
+            document.getElementById('titulo').classList.add('vermelho');
+        }
+
+        function verde() {
+            limpar();
+            document.getElementById('titulo').classList.add('verde');
+        }
+
+        function limpar() {
+            document.getElementById('titulo').classList.remove('azul');
+            document.getElementById('titulo').classList.remove('vermelho');
+            document.getElementById('titulo').classList.remove('verde');
+        }
+
+        function mostrar(elemento) {
+            elemento.style.display = 'none'
+            document.getElementById('telefone').style.display = 'block';
+        }
+
+    </script>
+    <style>
+        .azul {
+            background-color: blue;
+            color: #fff;
+        }
+
+        .vermelho {
+            background-color: red;
+            color: #fff;
+        }
+
+        .verde {
+            background-color: greenyellow;
+            color: #fff;
+        }
+
+        #telefone {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="titulo">Seja bem vindo</h1>
+
+    <button onclick="azul()">Azul</button>
+    <button onclick="vermelho()">Vermelho</button>
+    <button onclick="verde()">Verde</button> 
+
+    <div id="telefone">DDD 98787-8765</div>
+    <button onclick="mostrar(this)">Mostrar telefone</button>
+    
+</body>
+</html>

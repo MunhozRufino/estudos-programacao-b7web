@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // let carros = [ 'Palio', 'Uno', 'Gol', 'Ferrari']; 
+        // Obs: Acima podemos ver uma forma de layout do códgio
+
+        let carros = [
+            'Palio',
+            'Uno',
+            'Gol',
+            'Ferrari',
+        ];
+
+        console.log(carros[3])
+
+        let carro = { // referência ao objeto
+            nome:'Fiat',
+            modelo:'Uno',
+            peso:'800kg',
+            ligar:function() {
+                console.log('Vrum Vrum!');
+            },
+            acelerar:function() {
+                console.log('Riiiiirhirhiii!');
+            }
+        };
+
+        carro.ligar();
+        carro.acelerar();
+
+        console.log(carro['nome']);
+        console.log('derrapou '+carro.modelo);
+
+        document.getElementById('titulo').style.display = 'block';
+
+
+    </script>
+
+</head>
+<body>
+    
+    <h1 id="titulo">Seja bem vindo</h1>
+
+
+    
+</body>
+</html>
