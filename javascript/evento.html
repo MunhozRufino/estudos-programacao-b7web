@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function clicou() {
+            alert('Você enviou com sucesso!');
+            document.getElementById('titulo').innerHTML = 'Obrigado!';
+        }
+
+    </script>
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <h1 id="titulo" onclick="alert('Clicou')" onmouseover="console.log('Passou o mouse')" onmouseout="console.log('Tirou o mouse')">Seja bem vindo</h1>
+
+
+    <input id="campo" type="text" name="usuario" value="Nome do usuário">
+    
+    <button onclick="clicou()" >Clique em mim</button>
+    <button onclick="this.innerHTML='Você já clicou'" >Clique de novo</button>
+
+</body>
+</html>
