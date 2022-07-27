@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function menuToggle() {
+            let menuArea = document.getElementById('menu-area');
+
+            // if(menuArea.classList.contains('menu-opened') == true) {
+            //     menuArea.classList.remove('menu-opened');
+            // } else {
+            //     menuArea.classList.add('menu-opened');
+            // } Está é uma das formas aplicadas junto com o CSS para abrir o menu
+            
+            if(menuArea.style.width =='200px'){
+                menuArea.style.width ='0px'
+            } else {
+                menuArea.style.width ='200px';
+            }
+            // Está é a segunda forma mais prática. 
+        }
+
+
+    </script>
+    <style>
+    body {
+    background:#EEE;
+    }
+    aside {
+        position:fixed;
+        top:0;
+        right:0;
+        z-index:999;
+        display:flex;
+    }
+    #menu-opener {
+        width:60px;
+        height:60px;
+        cursor:pointer;
+        margin-top:20px;
+        margin-right:30px;
+    }
+    #menu-area {
+        width: 0px;
+        height:100vh;
+        background:#ccc;
+        overflow-x:hidden;
+        overflow-y:auto;
+        transition: all ease .5s;
+    }
+    #menu-area ul, #menu-area li {
+        padding:0;
+        list-style:none;
+    }
+    #menu-area li {
+        display:block;
+        padding:10px;
+        color:#555;
+        cursor:pointer;
+    }
+    #menu-area li:hover {
+        background:#DDD;
+    }
+
+    /* .menu-opened {
+        width: 200px !important;
+    } 
+    Esté e o CSS necessário para realizar a abertura do menu jutno com JS
+    */
+
+
+    </style>
+</head>
+<body>
+    
+    <h1 id="titulo">Seja bem vindo</h1>
+
+    <aside>
+        <div id="menu-opener" onmouseover="menuToggle()" >
+            <img src="../assets/menu.png" width="100">
+        </div>
+        <div id="menu-area" onmouseleave="menuToggle()">
+            <ul>
+                <li>Home</li>
+                <li>Sobre</li>
+                <li>Contato</li>
+            </ul>
+        </div>
+    </aside>
+    
+</body>
+</html>
