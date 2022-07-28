@@ -14,14 +14,28 @@
 
     <script>
 
-        let texto = '';
+        // FOR LOOP
+        // let texto = '';
 
-        for(let i = 1; i <= 10; i++) {
-            texto = texto + i + '<br/>';
+        // for(let i = 0; i <= 10; i++) { // cria-se uma variavel auxiliar uma letra só "i"
+        //     texto = texto + i + '<br/>'; // sequência de como irá ser apresentado o texto 
+        // }
 
+        // document.getElementById('dia').innerHTML = texto;
+
+
+        // FOR LOOP ARRAY
+        let carros = ['Ferrari', 'Fusca', 'Palio', 'Corolla'];
+
+        let html = '<ul>';
+
+        for(let i in carros) {
+            html += '<li>' + carros[i] + '</li>';
         }
 
-        document.getElementById('dia').innerHTML = texto;
+        html += '</ul>';
+
+        document.getElementById('dia').innerHTML = html;
 
     </script>
 
