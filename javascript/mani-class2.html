@@ -14,16 +14,14 @@
             border: 1px solid gray;
         }
 
+        .preto {
+            background-color: black;
+            color: aliceblue;
+        }
+
         .verde {
-            background-color: greenyellow;
-        }
-
-        .vermelho {
-            background-color: red;
-        }
-
-        .azul {
-            background-color: blue;
+            background-color: green;
+            color: aliceblue;
         }
 
     </style>
@@ -31,14 +29,17 @@
 <body>
     <div id="exemplo">Munhoz</div>
 
-    <button onclick="trocar()">Botão</button>
+    <button class="preto" onclick="trocar()">Botão</button>
 
     <script>
 
         function trocar() {
             if(document.querySelector('button').classList.contains('preto')) {
-                document.querySelector('button').classList.contains('preto');
-                document.querySelector('button').classList.contains('preto');
+                document.querySelector('button').classList.remove('preto');
+                document.querySelector('button').classList.add('verde');
+            } else {
+                document.querySelector('button').classList.remove('verde');
+                document.querySelector('button').classList.add('preto');
             }
         }
 
