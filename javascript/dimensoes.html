@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .texto {
+            width: 200px;
+            height: 200px;
+            overflow: auto;
+            background-color: #ccc;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="texto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic est consequuntur iste quidem accusamus quae recusandae placeat, magni quia fuga totam, veniam esse labore eaque voluptate nam sit at voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic est consequuntur iste quidem accusamus quae recusandae placeat, magni quia fuga totam, veniam esse labore eaque voluptate nam sit at voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic est consequuntur iste quidem accusamus quae recusandae placeat, magni quia fuga totam, veniam esse labore eaque voluptate nam sit at voluptas.
+    </div>
+
+    <script>
+        //1° GRUPO
+        document.querySelector('.texto').offsetWidth //utilizado par ver a dimensão 'total' no console = 240px
+        document.querySelector('.texto').offsetHeight//utilizado par ver a dimensão 'total' no console = 240px
+
+        //2° GRUPO
+        document.querySelector('.texto').clientWidth //utilizado par ver a dimensão 'conteudo visivel' sem o scrolbar no console = 223px
+        document.querySelector('.texto').clientHeight//utilizado par ver a dimensão 'conteudo visivel' sem o scrolbar no console = 240px
+
+        //3° GRUPO    
+        document.querySelector('.texto').scrollHeight //utilizado par ver a dimensão 'conteudo interno total' sem o scrolbar no console = 472px
+        document.querySelector('.texto').scrollWidth//utilizado par ver a dimensão 'conteudo interno total' sem o scrolbar no console = 223px
+        
+    </script>
+    
+</body>
+</html>

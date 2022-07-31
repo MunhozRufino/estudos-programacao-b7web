@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .texto {
+            width: 200px;
+            height: 900px;
+            overflow: auto;
+            background-color: #ccc;
+            padding: 20px;
+        }
+
+        .scrollbutton {
+            width: 30px;
+            height: 30px;
+            background-color: #f00;
+            border-radius: 15px;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .scrollbutton2 {
+            height: 30px;
+            width: 30px;
+            background-color: #0f0;
+            border-radius: 15px;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="texto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic est consequuntur iste quidem accusamus quae recusandae placeat, magni quia fuga totam, veniam esse labore eaque voluptate nam sit at voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic est consequuntur iste quidem accusamus quae recusandae placeat, magni quia fuga totam, veniam esse labore eaque voluptate nam sit at voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic est consequuntur iste quidem accusamus quae recusandae placeat, magni quia fuga totam, veniam esse labore eaque voluptate nam sit at voluptas.
+    </div>
+
+    <div class="scrollbutton" onclick="subirtela()"></div>
+
+    <div class="scrollbutton2" onclick="descertela()"></div>
+
+    <script>
+        
+        document.querySelector('.texto').scrollTop; //código para pegar a informação do scroll no elemento
+        
+        window.scrollX //código para pegar a informação do scroll na tela toda
+        window.scrollY //código para pegar a informação do scroll na tela toda
+
+        document.querySelector('.texto').scrollTo(0, 0); //esta numeração refere-se ao eixo x e y
+        window.scrollTo(0, 0); //esta numeração refere-se ao eixo x e y
+
+        function subirtela() {
+            window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+            });
+        }
+
+        function descertela() {
+            window.scrollTo({
+                top: 631,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        function decidirBotao() {
+            if(window.scrollY === 0) {
+                //ocultar o botão
+                document.querySelector('.scrollbutton').style.display = 'none';
+            } else {
+                //mostrar botão
+                document.querySelector('.scrollbutton').style.display = 'block';
+            }
+        }
+
+        // setInterval(decidirBotao, 1000); uma solução para execução da função
+
+        window.addEventListener('scroll', decidirBotao); // segunda maneira de execução da função
+
+        function decidirBotao2() {
+            if(window.scrollY === 331) {
+                //ocultar o botão
+                document.querySelector('.scrollbutton2').style.display = 'none';
+            } else {
+                //mostrar botão
+                document.querySelector('.scrollbutton2').style.display = 'block';
+            }
+        }
+
+        // setInterval(decidirBotao, 1000); uma solução para execução da função
+
+        window.addEventListener('scroll', decidirBotao2); // segunda maneira de execução da função
+        
+    </script>
+    
+</body>
+</html>
