@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let lista = ['ovo', 'farinha', 'corante', 'massa']
+        let lista2 = ['prato', 'panela', 'forno']
+
+        delete lista[1]; //Não e a melhor forma.
+        lista.splice(1,1) //Remove de acordo com o posicionamento.
+        lista.sort(); //Alinha em ordem alfabética.
+        lista.reverse(); // Alinha em ordem alfabética invertido.
+        
+        let res = lista.concat(lista2);
+
+        console.log(res)
+
+
+    </script>
+
+</head>
+<body>
+    
+    <h1 id="titulo">Seja bem vindo</h1>
+    
+</body>
+</html>

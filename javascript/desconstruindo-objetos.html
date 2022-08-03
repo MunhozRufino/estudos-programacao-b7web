@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        let pessoa = {
+            nome: 'Munhoz',
+            sobrenome: 'Rufino',
+            idade: 30,
+            social: {
+                facebook: 'munhozmmr',
+                instagram: 'rufinommr'
+            },
+            nomeCompleto: function() {
+                return `${this.nome} ${this.sobrenome}`;
+            }
+        };
+
+        /* let nome = pessoa.nome;
+        let sobrenome = pessoa.sobrenome;
+        let idade = pessoa.idade;
+        let instagram = pessoa.social.instagram;
+
+        console.log(nome, sobrenome, idade, instagram) */
+
+        let {nome:pessoaNome, sobrenome, idade = 0} = pessoa;
+        //Zero refere-se a um valor padrão caso não seja preenchido.
+
+        console.log(pessoaNome, sobrenome, idade);
+
+
+    </script>
+
+</head>
+<body>
+    
+    <h1 id="titulo">Seja bem vindo</h1>
+    <div class="demo"></div>
+    
+</body>
+</html>

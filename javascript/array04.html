@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let lista = [45, 4, 9, 16, 25];
+        let lista2 = []
+
+        lista2 = lista.find(function(item) {
+            if(item == 16) {
+                return true;
+            }
+            //return (item == 16)? true : false;
+        });
+
+        lista3 = lista.findIndex(function(item) {
+            if(item == 16) {
+                return true;
+            }
+            //return (item == 16)? true : false;
+        });
+
+        let res = lista;
+
+        console.log(res);
+        console.log(lista2)
+        console.log(lista3)
+
+
+        
+
+        let chamada = [
+            {id:1, nome: 'Mauricio', sobrenome: 'Munhoz'},
+            {id:1, nome: 'Paulo', sobrenome: 'Rezende'},
+            {id:1, nome: 'Lucas', sobrenome: 'Melo'}
+        ];
+
+        let aluno = chamada.find(function(item){
+            return(item.sobrenome == 'Munhoz')? true : false;
+        });
+
+        console.log(aluno);
+
+
+    </script>
+
+</head>
+<body>
+    
+    <h1 id="titulo">Seja bem vindo</h1>
+    
+</body>
+</html>

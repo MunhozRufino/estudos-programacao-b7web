@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let lista = [45, 4, 9, 16, 25];
+        let lista2 = []
+
+        lista2 = lista.map(function(item) {
+            return item * 2;
+        })
+
+        lista3 = lista.filter(function(item){
+            if(item > 20) {
+                return true;
+            } else {
+                return false;
+            }
+        })
+
+        lista4 = lista.every(function(item){ //every ou some, some se possuir um item ele será true
+            if(item > 20) {
+                return true;
+            } else {
+                return false;
+            }
+
+            // return (item > 3)? true : false; 
+            //Outra forma de fazer a função com menos linhas.
+        })
+        
+        // for(let i in lista) {
+        //     lista2.push(lista[i] * 2)
+        // } Função que pode ser utilizada.
+
+        let res = lista;
+
+        console.log(res);
+        console.log(lista2)
+        console.log(lista3)
+        console.log(lista4)
+
+    </script>
+
+</head>
+<body>
+    
+    <h1 id="titulo">Seja bem vindo</h1>
+    
+</body>
+</html>
