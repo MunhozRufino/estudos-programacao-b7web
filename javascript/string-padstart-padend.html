@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        let telefone = '5';
+        console.log(telefone.padEnd(9, '*'))
+        //padEnd cria uma sequencia de digitos (9) preenchendo com o valor destacado('*'). 
+
+        let cartao = '4546878318973759';
+        tamanho = cartao.length;
+        console.log(tamanho);
+
+        let ultimosDigitos = cartao.slice(-4);
+        console.log(ultimosDigitos);
+        console.log(ultimosDigitos.padStart(16, '*'));
+
+        let cartaoMask = ultimosDigitos.padStart(16, '*');
+        console.log('Este e seu cartão? '+caraoMask);
+        
+
+    </script>
+
+</head>
+<body>
+    
+    <h1 id="titulo">Seja bem vindo</h1>
+    <div class="demo"></div>
+    
+</body>
+</html>

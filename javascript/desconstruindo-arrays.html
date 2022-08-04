@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //DESCONSTRUÇÃO DE ARREYS
+        let info = ['Munhoz Rufino', 'Munhoz', 'Rufino', '@munhoz'];
+        let [nomeCompleto, nome, sobrenome, instagram] = info;
+        console.log(nomeCompleto, instagram);
+
+        
+        //DESCONSTRUÇÃO DE ARREYS DIRETA
+        let [nome1, sobrenome2, idade=90] = ['Munhoz', 'Rufino'];
+        console.log(nome1, sobrenome2, idade);
+
+        //DESCONSTRUÇÃO DE ARREYS COM FUNÇÃO
+        function criar() {
+            return [1, 2, 3];
+        }
+
+        let [a, b, c] = criar();
+        console.log(a, b, c)
+
+    </script>
+
+</head>
+<body>
+    
+    <h1 id="titulo">Seja bem vindo</h1>
+    <div class="demo"></div>
+    
+</body>
+</html>

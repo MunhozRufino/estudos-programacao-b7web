@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /* FORMA SEM ARROW 01
+        function somar(a, b) {
+            return a + b;
+        }
+        console.log(somar(10, 15)) */
+
+        /* FORMA SEM ARROW 02
+        let somar = function(a, b) {
+            return a + b ;
+        }
+        console.log(somar(25, 35))*/
+
+        /* FORMA COM ARROW
+        let somar = (a, b) => {
+            return a + b;
+        }
+        console.log(somar(50, 35))*/
+
+        let somar = (a, b) => a+b; 
+
+        let letrasNome = nome => nome.length;
+
+        console.log(somar(65, 75));
+        console.log(letrasNome('Munhoz'));
+
+
+    </script>
+
+</head>
+<body>
+    
+    <h1 id="titulo">Seja bem vindo</h1>
+    <div class="demo"></div>
+    
+</body>
+</html>

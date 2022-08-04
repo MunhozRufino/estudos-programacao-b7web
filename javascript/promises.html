@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        function pegarTemperatura() {
+            return new Promise(function(resolve, reject) {
+                console.log("Pegando temperatura...");
+
+                setTimeout(function() {
+                    resolve("40° na sombra!");
+                }, 2000);
+            });
+        }
+
+        //USANDO A PROMISE
+
+        console.log('Código antes!')
+
+        let temp = pegarTemperatura();
+
+        console.log('Código durante!')
+
+        temp.then(function(resultado) {
+            console.log("Temperatura: "+resultado);
+        });
+        temp.catch(function(error) {
+            console.log("Eita, deu erro!");
+        });
+
+        console.log('Código depois!')
+
+
+
+    </script>
+
+</head>
+<body>
+    
+    <h1 id="titulo">Seja bem vindo</h1>
+    <div class="demo"></div>
+    
+</body>
+</html>
