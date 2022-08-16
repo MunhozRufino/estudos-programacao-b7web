@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        async function loadPosts() {
+            document.getElementById('posts').innerHTML = 'Carregando...';
+
+            let req = await fetch('https://jsonplaceholder.typicode.com/comments');
+            let json = await req.json();
+            montarBlog(json);
+
+            //Forma mais simples de fazer o código.
+        }    
+
+        function montarBlog(lista) {
+            let html = '';
+
+            for(let i in lista) {
+                html += '<h3>'+lista[i].name+'</h3>';
+                html += '<h4>'+lista[i].email+'</h4>';
+                html += lista[i].body+'<br/>';
+                html += '<hr/>';
+            }
+
+            document.getElementById('posts').innerHTML = html;
+        }
+
+    </script>
+
+</head>
+<body>
+    
+    <button onclick="loadPosts()">Carregar posts</button>
+    <div id="posts"></div>
+    
+</body>
+</html>
